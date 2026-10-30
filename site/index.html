@@ -3,12 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Michael Bimira — Data Analytics &amp; Applied AI Engineer. Bridging operational clinical experience with machine learning, agentic workflows, and full-stack development.">
+  <meta name="description" content="Michael Bimira — Data Analytics &amp; Applied AI Engineer. Bridging operational clinical experience with machine learning, agentic workflows, and full-stack development. Real case studies: concrete compressive strength (R² 0.93), automobile clustering (silhouette 0.416), Arizona State Hospital staffing automation.">
+  
+  <!-- OpenGraph / Twitter Cards -->
+  <meta property="og:title" content="Bimira The Analyst — Data Analytics &amp; Applied AI Portfolio">
+  <meta property="og:description" content="Healthcare professional and Data/AI Engineer. Real case studies: concrete compressive strength (R² 0.93), automobile clustering (silhouette 0.416), Arizona State Hospital staffing automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mbimira.github.io/bimira_web/">
+  <meta property="og:image" content="https://mbimira.github.io/bimira_web/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bimira The Analyst — Data Analytics &amp; Applied AI">
+  <meta name="twitter:description" content="Real case studies in predictive modeling, hierarchical clustering, and healthcare staffing automation.">
+
   <title>Bimira The Analyst — Data Analytics &amp; Applied AI</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Theme Toggle (top-right) -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
 
   <!-- Header / Navigation -->
   <header class="site-header">
@@ -17,10 +34,11 @@
       <nav class="main-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#agentic">Agentic AI</a>
         <a href="#contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-primary">Contact</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -31,8 +49,16 @@
     <div class="container hero-inner">
       <div class="hero-content">
         <span class="hero-kicker">Data Analytics &amp; Applied AI</span>
-        <h1 class="hero-title">Data is everywhere.<br><span class="highlight">I make it useful.</span></h1>
+        <h1 class="hero-title">
+          Data is everywhere.<br>
+          <span class="highlight">I make it useful.</span>
+        </h1>
         <p class="hero-subtitle">Healthcare professional and Data/AI Engineer bridging operational clinical experience with machine learning, agentic workflows, and full-stack development.</p>
+        <div class="rotating-taglines" id="rotating-taglines">
+          <span class="tagline active">Building agentic workflows on Arch Linux</span>
+          <span class="tagline">Automating hospital operations with Python &amp; React</span>
+          <span class="tagline">Predictive machine learning modeling</span>
+        </div>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View My Work</a>
           <a href="#about" class="btn btn-outline">About Me</a>
@@ -41,38 +67,47 @@
     </div>
   </section>
 
+  <!-- Sticky CTA Bar -->
+  <div class="cta-bar">
+    <div class="container cta-inner">
+      <span class="cta-text">Ready to work together?</span>
+      <a href="#contact" class="btn btn-primary">Contact Me</a>
+      <a href="resume.html" class="btn btn-outline">Download Résumé</a>
+    </div>
+  </div>
+
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">Healthcare professional turned Data/AI Engineer.</p>
       </div>
       <div class="about-grid">
         <div class="about-bio">
           <p>Healthcare professional and Data/AI Engineer bridging operational clinical experience with machine learning, agentic workflows, and full-stack development.</p>
-          <p>Developed an automated task assignment and staffing application for Arizona State Hospital that instantly routes shift schedules into a centralized database.</p>
+          <p>Previously a Behavioral Health Technician — I bring domain expertise in healthcare operations, staffing, and patient workflow to every technical solution I build.</p>
           <p>Proven track record building end-to-end applications (TypeScript, React, Python) and tuning ML models to turn complex domain data into actionable intelligence.</p>
         </div>
         <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Case studies published</div>
+          <div class="stat-card reveal">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Published case studies</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-number">11+</div>
-            <div class="stat-label">Skills in SQL, Python, Tableau, Power BI &amp; more</div>
-          </div>
-          <div class="stat-card">
+          <div class="stat-card reveal">
             <div class="stat-number">1</div>
-            <div class="stat-label">Automated staffing app for Arizona State Hospital</div>
+            <div class="stat-label">Hospital staffing app in production</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-number">11+</div>
+            <div class="stat-label">Skills: SQL, Python, Tableau, Power BI &amp; more</div>
           </div>
         </div>
       </div>
       <div class="skills">
         <h3 class="skills-title">Technical Skills</h3>
         <div class="skills-list">
-          <span class="skill-tag">Python</span><span class="skill-tag">TypeScript</span><span class="skill-tag">React</span><span class="skill-tag">SQL</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">Neural Networks</span><span class="skill-tag">Gradient Boosting</span><span class="skill-tag">Agentic Workflows</span><span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span><span class="skill-tag">Git</span><span class="skill-tag">Pandas</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">SciPy</span><span class="skill-tag">Seaborn</span>
+          <span class="skill-tag">Python</span><span class="skill-tag">TypeScript</span><span class="skill-tag">React</span><span class="skill-tag">SQL</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">Neural Networks</span><span class="skill-tag">Gradient Boosting</span><span class="skill-tag">Agentic Workflows</span><span class="skill-tag">MCP</span><span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span><span class="skill-tag">Git</span><span class="skill-tag">Pandas</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">SciPy</span><span class="skill-tag">Seaborn</span>
         </div>
       </div>
     </div>
@@ -81,29 +116,74 @@
   <!-- Projects Section -->
   <section class="projects" id="projects">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2 class="section-title">Featured Work</h2>
         <p class="section-subtitle">Real case studies in data analytics and applied AI.</p>
       </div>
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card reveal">
+          <div class="project-image project-image--hospital"></div>
+          <div class="project-content">
+            <span class="project-tag">Full-Stack</span>
+            <h3 class="project-title">Arizona State Hospital Staffing App</h3>
+            <p class="project-excerpt">Automated task assignment and staffing application that instantly routes shift schedules into a centralized database. Built with Bun, Turborepo, React, and Turso.</p>
+            <div class="project-tech">
+              <span class="skill-tag">Bun</span><span class="skill-tag">Turborepo</span><span class="skill-tag">React</span><span class="skill-tag">Turso</span>
+            </div>
+            <a href="#" class="btn btn-outline">View Case Study</a>
+          </div>
+        </article>
+        <article class="project-card reveal">
           <div class="project-image project-image--concrete"></div>
           <div class="project-content">
             <span class="project-tag">Data Science</span>
             <h3 class="project-title">Predicting Concrete Compressive Strength</h3>
             <p class="project-excerpt">Tuned neural network predicting concrete strength from mix proportions. R² 0.93, RMSE 4.6 MPa, MAE 2.9 MPa on held-out UCI data — about 38% lower error than linear regression.</p>
+            <div class="project-tech">
+              <span class="skill-tag">Python</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">Neural Networks</span>
+            </div>
             <a href="projects/concrete-strength/index.html" class="btn btn-outline">View Case Study</a>
           </div>
         </article>
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="project-image project-image--automobile"></div>
           <div class="project-content">
             <span class="project-tag">Machine Learning</span>
             <h3 class="project-title">Automobile Clustering</h3>
             <p class="project-excerpt">Agglomerative hierarchical clustering on the UCI mtcars dataset (32 models). Ward linkage, 3 clusters, silhouette score 0.416, 84.17% variance explained by PCA.</p>
+            <div class="project-tech">
+              <span class="skill-tag">Python</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">PCA</span>
+            </div>
             <a href="projects/automobile-clustering/index.html" class="btn btn-outline">View Case Study</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agentic Workflows Section -->
+  <section class="agentic" id="agentic">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Agentic Workflows &amp; AI Engineering</h2>
+        <p class="section-subtitle">Moving beyond notebooks — building autonomous agents and local LLM orchestration.</p>
+      </div>
+      <div class="agent-grid">
+        <div class="agent-card reveal">
+          <div class="agent-icon">🤖</div>
+          <h3>Goose AI &amp; MCP Integrations</h3>
+          <p>Building and integrating with Goose AI and Model Context Protocol (MCP) servers to connect LLMs with local tools, databases, and workflows.</p>
+        </div>
+        <div class="agent-card reveal">
+          <div class="agent-icon">🦙</div>
+          <h3>Local LLM Orchestration</h3>
+          <p>Running and orchestrating Ollama and Qwen models locally for privacy-first AI applications on Arch Linux.</p>
+        </div>
+        <div class="agent-card reveal">
+          <div class="agent-icon">⚙️</div>
+          <h3>Agentic Pipelines</h3>
+          <p>Orchestrating multi-step agentic workflows that plan, execute, and reflect — turning data into decisions without manual intervention.</p>
+        </div>
       </div>
     </div>
   </section>
