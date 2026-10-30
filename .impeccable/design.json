@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T23:30:00-07:00",
+  "title": "Design System: Bimira The Analyst",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Navy",
+        "canonical": "#1a1a2e",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Blue",
+        "canonical": "#2563eb",
+        "tonalRamp": ["#1e3a8a", "#1e40af", "#1d4ed8", "#2563eb", "#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Blue Hover",
+        "canonical": "#1d4ed8",
+        "tonalRamp": ["#1e3a8a", "#1e40af", "#1d4ed8", "#2563eb", "#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"]
+      },
+      "neutral-surface": {
+        "role": "neutral",
+        "displayName": "Light Surface",
+        "canonical": "#f8fafc",
+        "tonalRamp": ["#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#475569", "#334155", "#1e293b"]
+      },
+      "neutral-border": {
+        "role": "neutral",
+        "displayName": "Border Gray",
+        "canonical": "#e5e7eb",
+        "tonalRamp": ["#f3f4f6", "#e5e7eb", "#d1d5db", "#9ca3af", "#6b7280", "#4b5563", "#374151", "#1f2937"]
+      },
+      "neutral-text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "canonical": "#6b7280",
+        "tonalRamp": ["#9ca3af", "#6b7280", "#4b5563", "#374151", "#1f2937", "#111827", "#111827", "#111827"]
+      },
+      "neutral-text-body": {
+        "role": "neutral",
+        "displayName": "Text Body",
+        "canonical": "#374151",
+        "tonalRamp": ["#6b7280", "#4b5563", "#374151", "#1f2937", "#111827", "#111827", "#111827", "#111827"]
+      },
+      "neutral-text-light": {
+        "role": "neutral",
+        "displayName": "Text Light",
+        "canonical": "#9ca3af",
+        "tonalRamp": ["#cbd5e1", "#9ca3af", "#6b7280", "#4b5563", "#374151", "#1f2937", "#111827", "#111827"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Product name and section headings; system sans-serif."
+      },
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "Hero section headline; large, bold system sans-serif."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph text, case studies, and supporting content."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Section kickers, skill tags, project tags; tracked uppercase."
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button Primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action button; blue background, white text.",
+      "html": "<button class=\"ds-btn-primary\">View My Work</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; padding: 10px 20px; border-radius: 8px; background: #2563eb; color: #ffffff; border: 1px solid #2563eb; cursor: pointer; transition: all 0.2s; } .ds-btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }"
+    },
+    {
+      "name": "Button Outline",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Outline action button; transparent background, blue border and text.",
+      "html": "<button class=\"ds-btn-outline\">About Me</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; padding: 10px 20px; border-radius: 8px; background: transparent; color: #2563eb; border: 1px solid #2563eb; cursor: pointer; transition: all 0.2s; } .ds-btn-outline:hover { background: #eff6ff; }"
+    },
+    {
+      "name": "Contact Link",
+      "kind": "button",
+      "refersTo": "contact-link",
+      "description": "Block-level contact link with left icon; used for email, LinkedIn, GitHub, résumé.",
+      "html": "<a class=\"ds-contact-link\" href=\"mailto:mikebimira@gmail.com\"><span class=\"ds-contact-icon\">✉</span><span>mikebimira@gmail.com</span></a>",
+      "css": ".ds-contact-link { display: flex; align-items: center; gap: 12px; font-size: 1rem; color: #2563eb; font-weight: 500; padding: 14px 24px; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; transition: all 0.2s; } .ds-contact-link:hover { background: #eff6ff; border-color: #2563eb; color: #1d4ed8; } .ds-contact-icon { font-size: 1.25rem; width: 24px; text-align: center; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Case study card; white background, hairline border, 16px radius.",
+      "html": "<article class=\"ds-project-card\"><div class=\"ds-project-image\"></div><div class=\"ds-project-content\"><h3 class=\"ds-project-title\">Project Title</h3><p class=\"ds-project-excerpt\">Project description goes here.</p><a href=\"#\" class=\"ds-btn-outline\">View Case Study</a></div></article>",
+      "css": ".ds-project-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; transition: all 0.3s; } .ds-project-card:hover { border-color: #2563eb; transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(37,99,235,0.15); } .ds-project-image { height: 200px; background: #e0e7ff; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #6b7280; font-weight: 500; } .ds-project-content { padding: 24px; } .ds-project-content h3 { color: #1a1a2e; font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; } .ds-project-content p { color: #374151; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }"
+    },
+    {
+      "name": "Skill Tag",
+      "kind": "custom",
+      "refersTo": "skill-tag",
+      "description": "Small pill-shaped tag for skills; light blue background, blue text.",
+      "html": "<span class=\"ds-skill-tag\">Python</span>",
+      "css": ".ds-skill-tag { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; font-weight: 500; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Clean, professional, data-first",
+    "overview": "A clean, light-themed portfolio that presents data analytics and applied AI work in a professional, approachable format. The design uses a white ground with deep navy text, blue accents, and generous spacing — inspired by modern data analytics portfolios. Content comes first: case studies, skills, and contact information are presented clearly without decorative distraction.",
+    "keyCharacteristics": [
+      "Deep navy (#1a1a2e) primary text on white (#ffffff) ground",
+      "Blue (#2563eb) accent for actions and links",
+      "Clean sans-serif typeface throughout",
+      "Light surface backgrounds (#f8fafc) for section separation",
+      "Border-radius 12px for cards and containers",
+      "Generous spacing with 8px baseline grid"
+    ],
+    "rules": [
+      { "name": "The Blue Accent Rule", "body": "Blue (#2563eb) is the only chromatic accent used for actions and emphasis. It appears on buttons, links, skill tags, and section borders — never on body text or backgrounds.", "section": "colors" },
+      { "name": "The Clean Surface Rule", "body": "Every surface is either white (#ffffff) or light surface (#f8fafc). No gradients, no glass, no decorative textures.", "section": "colors" },
+      { "name": "The Single Font Rule", "body": "One system sans-serif face throughout (-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial). Hierarchy through size, weight, and letter spacing — not font mixing.", "section": "typography" }
+    ],
+    "dos": [
+      "Use blue (#2563eb) as the only chromatic accent, used sparingly for actions and emphasis.",
+      "Use system sans-serif fonts — no custom web fonts, no mixed typography.",
+      "Keep generous whitespace — cards and sections have ample breathing room.",
+      "Use light surface backgrounds (#f8fafc) for section separation, never gradients or textures.",
+      "Label all demonstration data as real; no fabricated metrics."
+    ],
+    "donts": [
+      "Use dark themes, neon accents, or glowing effects — this is a light, professional portfolio.",
+      "Use custom web fonts or mixed font families — one system sans-serif face.",
+      "Use glassmorphism, blur, or gradient backgrounds — flat, clean design only.",
+      "Use hard offset shadows — depth comes from borders and background layering.",
+      "Use same-size cards of icon-plus-heading-plus-text as the only page structure."
+    ]
+  }
+}

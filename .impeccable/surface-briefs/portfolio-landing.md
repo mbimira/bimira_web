@@ -1,0 +1,37 @@
+## Scope and visitor mode
+
+Surface: portfolio landing page (`/`)
+Mode: Persuade — the visitor decides and acts; design is the product. A hiring manager, recruiter, or potential client arrives from a resume, LinkedIn, or email link on a laptop or phone and decides within a minute or two whether the site owner is worth a conversation.
+
+## Audience, job, action, proof, constraints
+
+Audience: hiring managers, recruiters, potential clients (primary); the site owner updating as projects finish (secondary).
+Job: quickly see what the owner does (data analytics and applied AI), check that claims are backed by real projects and results, get a sense of how he thinks and communicates, find an easy way to contact him.
+Action/task: view case studies, follow the contact path — one click away from every page.
+Proof/content: short case studies per project (problem, data, method, result), live dashboards or demos where possible, real work only — no fabricated testimonials, metrics, customers, or benchmarks.
+Constraints: static HTML/CSS/JavaScript, no framework; deploy to GitHub Pages or Cloudflare Pages; dashboards and demos embedded or externally hosted; WCAG 2.1 AA baseline; works on phone and laptop; near-zero upkeep.
+
+## Chosen direction and memorable moment
+
+Chosen direction: CRT oscilloscope signal bench (concept-seed re-roll round 1, dealt index 4, source ID scientific-notation-oscilloscope-signal-bench; user locked this card over index 3 and the unexposed index 7 lead).
+Memorable moment: the first viewport is a CRT graticule with phosphor-green traces listing case studies and amber readouts showing measured results — the visitor sees data in motion, not a list of tools.
+
+## Unresolved decisions
+
+- Real case-study content (problem, data, method, result per project) has not been authored yet; placeholder content must be replaced before ship.
+- Custom domain for GitHub Pages / Cloudflare Pages deployment not yet decided.
+- Live dashboard/demo links not yet available.
+
+## Direction contract
+
+THESIS: A portfolio that proves data analytics and applied AI skills through real case studies (problem, data, method, result) rather than a tool list. Refuses the category-default dark-mode SaaS hero with metric cards and feature grids.
+
+OWN-WORLD: CRT oscilloscope signal bench — phosphor green (#0f0) on near-black (#060604), graticule gray etched background (#3a3a30), amber (#ffa500) readouts, condensed monospace instrument caps, everything measured against a ten-division graticule. One screen, many signals; channels overlay in the same graticule space.
+
+STORY: The visitor understands that Michael Bimira does data analytics and applied AI, backed by real case studies. They believe it because each case study shows problem → data → method → result with linked dashboards. They contact him — one click away.
+
+FIRST VIEWPORT: A CRT display filling the viewport, graticule grid as ground, phosphor green traces listing case studies, amber readouts showing key metrics (23% retention lift, 02 live dashboards), instrument knob navigation (view work, case studies, about, contact), primary action "make contact" in bottom-right. Title "michael bimira" in condensed caps top-left.
+
+FORM: Dealt challenger index 4 from concept-seed re-roll round 1; seed reference seed:408cf18a6cf947b2. Not the assigned lead (index 7), but the user's explicit choice over index 3.
+
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.

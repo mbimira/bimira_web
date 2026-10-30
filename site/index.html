@@ -3,102 +3,151 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Michael Bimira — Data Analytics &amp; Applied AI Portfolio. Real case studies in predictive modeling, neural networks, and data-driven decision making. Built static, framework-free.">
-  <title>Michael Bimira — Data Analytics &amp; Applied AI Portfolio</title>
+  <meta name="description" content="Michael Bimira — Data Analytics &amp; Applied AI Engineer. Bridging operational clinical experience with machine learning, agentic workflows, and full-stack development.">
+  <title>Bimira The Analyst — Data Analytics &amp; Applied AI</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- CRT Oscilloscope — first viewport, the thesis -->
-  <div class="crt-display" id="crt">
-    <div class="crt-bezel">
-      <div class="crt-brand">OSCILLOSCOPE</div>
-      <div class="crt-power">ON</div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">Bimira <span class="brand-accent">The Analyst</span></a>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Contact</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="crt-screen">
-      <div class="graticule" id="graticule"></div>
-      <div class="traces" id="traces">
-        <div class="trace channel-1 active" data-case="concrete">
-          <span class="trace-label">CH1 · case study 01</span>
-          <span class="trace-value">concrete compressive strength</span>
-        </div>
-        <div class="trace channel-2 active" data-case="automobile">
-          <span class="trace-label">CH2 · case study 02</span>
-          <span class="trace-value">automobile clustering</span>
-        </div>
-        <div class="trace channel-3" data-case="coming-soon">
-          <span class="trace-label">CH3 · coming soon</span>
-          <span class="trace-value">in progress</span>
-        </div>
-      </div>
-      <div class="sweep" id="sweep"></div>
-      <div class="crt-title">michael bimira</div>
-      <div class="crt-subtitle">data analytics &amp; applied ai — case studies</div>
-      <div class="crt-value-prop">Healthcare professional &amp; Data/AI Engineer — predictive modeling, neural networks, agentic workflows.</div>
-      <div class="readouts">
-        <div class="readout primary">
-          <span class="readout-label">signal strength</span>
-          <span class="readout-value" id="readout-val">82%</span>
-        </div>
-        <div class="readout secondary">
-          <span class="readout-label">channels active</span>
-          <span class="readout-value" id="chan-count">02</span>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-kicker">Data Analytics &amp; Applied AI</span>
+        <h1 class="hero-title">Data is everywhere.<br><span class="highlight">I make it useful.</span></h1>
+        <p class="hero-subtitle">Healthcare professional and Data/AI Engineer bridging operational clinical experience with machine learning, agentic workflows, and full-stack development.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#about" class="btn btn-outline">About Me</a>
         </div>
       </div>
     </div>
-    <div class="controls" id="controls">
-      <div class="knob active" data-section="home">view work</div>
-      <div class="knob" data-section="cases">case studies</div>
-      <div class="knob" data-section="about">about</div>
-      <div class="knob" data-section="contact">contact</div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Healthcare professional turned Data/AI Engineer.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-bio">
+          <p>Healthcare professional and Data/AI Engineer bridging operational clinical experience with machine learning, agentic workflows, and full-stack development.</p>
+          <p>Developed an automated task assignment and staffing application for Arizona State Hospital that instantly routes shift schedules into a centralized database.</p>
+          <p>Proven track record building end-to-end applications (TypeScript, React, Python) and tuning ML models to turn complex domain data into actionable intelligence.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Case studies published</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">11+</div>
+            <div class="stat-label">Skills in SQL, Python, Tableau, Power BI &amp; more</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Automated staffing app for Arizona State Hospital</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <h3 class="skills-title">Technical Skills</h3>
+        <div class="skills-list">
+          <span class="skill-tag">Python</span><span class="skill-tag">TypeScript</span><span class="skill-tag">React</span><span class="skill-tag">SQL</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">Neural Networks</span><span class="skill-tag">Gradient Boosting</span><span class="skill-tag">Agentic Workflows</span><span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span><span class="skill-tag">Git</span><span class="skill-tag">Pandas</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">SciPy</span><span class="skill-tag">Seaborn</span>
+        </div>
+      </div>
     </div>
-    <div class="action"><a href="#contact">make contact &rarr;</a></div>
-  </div>
-  <div class="page-wrap">
-    <section id="home" class="page-section">
-      <div class="section-intro">
-        <h2>the work, measured</h2>
-        <p>Each case study is a signal on the graticule: the problem, the data, the method, the result. No tool lists, no fabricated metrics — real analysis you can inspect.</p>
-      </div>
-      <div class="case-grid" id="case-grid">
-        <!-- Case studies injected by JS -->
-      </div>
-    </section>
+  </section>
 
-    <section id="cases" class="page-section hidden">
-      <div class="section-intro">
-        <h2>case studies</h2>
-        <p>Full breakdowns of completed projects: problem statement, dataset, method, outcome, and links to live dashboards where available.</p>
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">Real case studies in data analytics and applied AI.</p>
       </div>
-      <div class="case-detail-list" id="case-detail-list">
-        <!-- Detailed case studies injected by JS -->
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image project-image--concrete"></div>
+          <div class="project-content">
+            <span class="project-tag">Data Science</span>
+            <h3 class="project-title">Predicting Concrete Compressive Strength</h3>
+            <p class="project-excerpt">Tuned neural network predicting concrete strength from mix proportions. R² 0.93, RMSE 4.6 MPa, MAE 2.9 MPa on held-out UCI data — about 38% lower error than linear regression.</p>
+            <a href="projects/concrete-strength/index.html" class="btn btn-outline">View Case Study</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-image project-image--automobile"></div>
+          <div class="project-content">
+            <span class="project-tag">Machine Learning</span>
+            <h3 class="project-title">Automobile Clustering</h3>
+            <p class="project-excerpt">Agglomerative hierarchical clustering on the UCI mtcars dataset (32 models). Ward linkage, 3 clusters, silhouette score 0.416, 84.17% variance explained by PCA.</p>
+            <a href="projects/automobile-clustering/index.html" class="btn btn-outline">View Case Study</a>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" class="page-section hidden">
-      <div class="section-intro">
-        <h2>about</h2>
-      </div>
-      <div class="about-content">
-        <p>Healthcare professional and Data/AI Engineer bridging operational clinical experience with machine learning, agentic workflows, and full-stack development. Developed an automated task assignment and staffing application for Arizona State Hospital that instantly routes shift schedules into a centralized database. Proven track record building end-to-end applications (TypeScript, React, Python) and tuning ML models to turn complex domain data into actionable intelligence.</p>
-        <p>This site is static HTML/CSS/JavaScript — no framework, no build step, free hosting. It exists to show work, not to explain the problem.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="page-section hidden">
-      <div class="section-intro">
-        <h2>contact</h2>
-      </div>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
       <div class="contact-content">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-subtitle">Healthcare professional and Data/AI Engineer available for consulting, speaking, and collaboration.</p>
         <div class="contact-links">
-        <a href="mailto:mikebimira@gmail.com" class="contact-link">Email</a>
-        <a href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-        <a href="https://github.com/mbimira" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-        <a href="resume.html" class="contact-link">Résumé</a>
+          <a href="mailto:mikebimira@gmail.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            <span>mikebimira@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon">in</span>
+            <span>LinkedIn: michael-bimira-77779a372</span>
+          </a>
+          <a href="https://github.com/mbimira" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon">/</span>
+            <span>GitHub: mbimira</span>
+          </a>
+          <a href="resume.html" class="contact-link">
+            <span class="contact-icon">📄</span>
+            <span>Download Résumé</span>
+          </a>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="brand">Bimira <span class="brand-accent">The Analyst</span></a>
+        <p class="footer-note">Data Analytics &amp; Applied AI Engineer · Bridging clinical experience with machine learning and full-stack development.</p>
       </div>
-    </section>
-  </div>
+      <div class="footer-copy">
+        &copy; 2026 Michael Bimira. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

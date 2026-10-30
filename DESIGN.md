@@ -1,211 +1,193 @@
 ---
 name: Michael Bimira — Portfolio
-description: A portfolio that proves data analytics and applied AI skills through real case studies, rendered as a CRT oscilloscope signal bench.
+description: A portfolio that proves data analytics and applied AI skills through real case studies, rendered as a clean, professional design system.
 colors:
-  phosphor-green: "#0f0"
-  amber: "#ffa500"
-  graticule-gray: "#c0c0b0"
-  near-black: "#060604"
-  crt-screen: "#0a0a08"
-  bezel-border: "#14140e"
-  element-border: "#1a1a12"
-  dim-trace: "#8fff8f"
-  subtitle-muted: "#8a8a70"
-  title-white: "#ffffff"
-  body-text: "#e8e8e0"
+  ink: "#1a1a2e"
+  accent: "#2563eb"
+  accent-hover: "#1d4ed8"
+  neutral-bg: "#ffffff"
+  neutral-surface: "#f8fafc"
+  neutral-border: "#e5e7eb"
+  neutral-text-muted: "#6b7280"
+  neutral-text-body: "#374151"
+  neutral-text-light: "#9ca3af"
 typography:
   display:
-    fontFamily: "'Courier New', Courier, monospace"
-    fontSize: "clamp(32px, 6vw, 56px)"
-    fontWeight: 700
-    lineHeight: 1
-    letterSpacing: "-1px"
-    textTransform: "uppercase"
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "clamp(2.25rem, 4vw, 3rem)"
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: "-0.5px"
   body:
-    fontFamily: "'Courier New', Courier, monospace"
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
     fontSize: "clamp(13px, 1.4vw, 16px)"
     fontWeight: 400
-    lineHeight: 1.5
+    lineHeight: 1.7
   label:
-    fontFamily: "'Courier New', Courier, monospace"
-    fontSize: "11px"
-    fontWeight: 400
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "0.85rem"
+    fontWeight: 700
     lineHeight: 1
-    letterSpacing: "0.4px"
+    letterSpacing: "0.05em"
     textTransform: "uppercase"
-  instrument:
-    fontFamily: "'Courier New', Courier, monospace"
-    fontSize: "12px"
-    fontWeight: 400
-    lineHeight: 1
-    letterSpacing: "1px"
-    textTransform: "uppercase"
+  hero:
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "3rem"
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: "-1px"
 rounded:
-  sm: "4px"
-  md: "8px"
-  circle: "50%"
-spacing:
   sm: "8px"
-  md: "16px"
-  lg: "24px"
+  md: "12px"
+  lg: "16px"
+spacing:
+  sm: "16px"
+  md: "24px"
+  lg: "48px"
+  xl: "64px"
 components:
-  knob:
-    backgroundColor: "{colors.crt-screen}"
-    textColor: "{colors.phosphor-green}"
-    rounded: "{rounded.circle}"
-    padding: "0"
-    size: "42px"
-  knob-active:
-    backgroundColor: "{colors.crt-screen}"
-    textColor: "{colors.phosphor-green}"
-    rounded: "{rounded.circle}"
-    padding: "0"
-    size: "42px"
-  trace-primary:
-    textColor: "{colors.phosphor-green}"
-  trace-dim:
-    textColor: "{colors.dim-trace}"
-  readout-primary:
-    textColor: "{colors.title-white}"
-  readout-accent:
-    textColor: "{colors.amber}"
+  button-primary:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.neutral-bg}"
+    rounded: "{rounded.md}"
+    padding: "10px 20px"
+  button-outline:
+    backgroundColor: "{colors.neutral-bg}"
+    textColor: "{colors.accent}"
+    rounded: "{rounded.md}"
+    padding: "10px 20px"
+  contact-link:
+    backgroundColor: "{colors.neutral-bg}"
+    textColor: "{colors.accent}"
+    rounded: "{rounded.md}"
+    padding: "14px 24px"
+  project-card:
+    backgroundColor: "{colors.neutral-bg}"
+    borderColor: "{colors.neutral-border}"
+    rounded: "{rounded.lg}"
+    padding: "24px"
+  skill-tag:
+    backgroundColor: "#eff6ff"
+    textColor: "{colors.accent-hover}"
+    rounded: "{rounded.lg}"
+    padding: "6px 14px"
 
-# Design System: Michael Bimira — Portfolio
+# Design System: Bimira The Analyst
 
 ## Overview
 
-**Creative North Star: "The Signal Bench"**
+**Creative North Star: "Clean, professional, data-first"**
 
-A portfolio that works like a CRT oscilloscope signal bench: case studies are signals plotted on a ten-division graticule, results appear as phosphor-green traces and amber readouts, and navigation is a row of instrument knobs. The visitor decides within seconds whether the work is real — the mechanism (measurement, traces over time, graticule structure) is the product's own vocabulary, not a borrowed SaaS template.
-
-The aesthetic is dark, measured, and instrument-like. Density is low in the first viewport (one screen, many signals) and rises in the scrollable sections below. Motion is a single continuous sweep line, not scattered hover effects. Every surface belongs to the CRT world: the graticule is the ground, phosphor is the accent, amber marks state.
+A clean, light-themed portfolio that presents data analytics and applied AI work in a professional, approachable format. The design uses a white ground with deep navy text, blue accents, and generous spacing — inspired by modern data analytics portfolios like Alex The Analyst. Content comes first: case studies, skills, and contact information are presented clearly without decorative distraction.
 
 **Key Characteristics:**
-- Phosphor green (#0f0) primary on near-black (#060604) ground
-- Amber (#ffa500) for readouts and actions
-- Graticule gray (#c0c0b0) for secondary labels and measurement markings
-- Courier New monospace throughout — instrument caps for display, tracked labels for data
-- Ten-division graticule as the spatial armature
-- One continuous sweep line as the only motion
+- Deep navy (#1a1a2e) primary text on white (#ffffff) ground
+- Blue (#2563eb) accent for actions and links
+- Clean sans-serif typeface throughout
+- Light surface backgrounds (#f8fafc) for section separation
+- Border-radius 12px for cards and containers
+- Generous spacing with 8px baseline grid
 
 ## Colors
 
-**Primary — Phosphor green (#0f0):** Used for title text, active traces, active knob borders, the sweep line, and the readout-value highlight. This is the screen's active ink — it never exceeds ~15% of any given screen.
+**Primary — Deep Navy (#1a1a2e):** Used for headings, body text, and primary emphasis. The darkest value in the system.
 
-**Secondary — Amber (#ffa500):** Used for readout labels, the contact button border and text, and power-state indicators. Amber marks state changes and actions; it is never used for body text.
+**Accent — Blue (#2563eb):** Used for primary actions, links, skill tags, and section borders. The brand color.
 
-**Neutral — Graticule gray (#c0c0b0):** Used for graticule labels, inactive knob borders, secondary text, and measurement markings. Provides contrast against the near-black ground without competing with phosphor.
+**Neutral — White (#ffffff):** Body background and card surfaces.
 
-**Neutral — Near-black (#060604):** Body background. The darkest value in the system; everything else is drawn on top of it.
+**Neutral — Light Surface (#f8fafc):** Section backgrounds and subtle section separation.
 
-**Neutral — CRT screen (#0a0a08):** Panel background inside the bezel. Slightly lighter than the body ground so the screen reads as a recessed surface.
+**Neutral — Border (#e5e7eb):** Card borders, dividers, and input borders.
 
-**Neutral — Body text (#e8e8e0):** Soft off-white for long-form body copy (value proposition, case study paragraphs, about text). Higher contrast than graticule gray for readability at paragraph scale.
+**Neutral — Text Muted (#6b7280):** Secondary text, captions, and metadata.
+
+**Neutral — Text Body (#374151):** Paragraph text and supporting content.
 
 **Named Rules:**
-**The One Voice Rule.** Phosphor green is the only chromatic accent on any given screen. Amber is reserved for readouts and actions; everything else is gray, white, or black. This rarity is the point.
+**The Blue Accent Rule.** Blue (#2563eb) is the only chromatic accent used for actions and emphasis. It appears on buttons, links, skill tags, and section borders — never on body text or backgrounds.
 
-**The Ground Rule.** Every surface is either near-black (body), CRT screen (#0a0a08, recessed panels), or phosphor/amber (ink). No gradients, no glass, no tinted overlays.
+**The Clean Surface Rule.** Every surface is either white (#ffffff) or light surface (#f8fafc). No gradients, no glass, no decorative textures.
 
 ## Typography
 
-**Display Font:** Courier New (with Courier, monospace fallback) — monospace instrument caps, used for the product name and section headings.
+**Display Font:** System sans-serif (-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial) — used for headings and the product name.
 
-**Body Font:** Courier New (with Courier, monospace fallback) — monospace, used for case study descriptions and readout values.
+**Body Font:** System sans-serif — used for paragraphs, case study text, and supporting content.
 
-**Label/Mono Font:** Courier New (with Courier, monospace fallback) — tracked uppercase, used for knob labels, trace labels, graticule markings, and metadata.
+**Label Font:** System sans-serif — used for tracked uppercase labels, skill tags, and section kickers.
 
-**Character:** A single monospace face throughout. The instrument character comes from tracking, case, and scale — not from mixing families. The display is large and tight-tracked (-1px); labels are small and wide-tracked (+0.4px to +1px).
+**Character:** A single sans-serif face throughout. Hierarchy is established through size, weight, and letter spacing — not through font mixing.
 
 ### Hierarchy
 
-- **Display** (700, clamp(32px, 6vw, 56px), line-height 1, -1px letter-spacing): Product name and section headings. Appears top-left of the CRT screen and as section headers below.
-- **Title** (400, clamp(13px, 1.4vw, 16px), line-height 1.4): Case study titles within traces. Bold weight within the trace.
-- **Body** (400, clamp(13px, 1.4vw, 16px), line-height 1.5): Case study problem/data/method/result text. Max measure ~75ch.
-- **Label** (400, 11px, line-height 1, +0.4px letter-spacing, uppercase): Graticule markings, trace labels, case metadata.
-- **Instrument** (400, 12px, line-height 1, +1px letter-spacing, uppercase): Knob navigation labels.
-
-**Named Rule:**
-**The Mono-Only Rule.** One font family, one source. No display serif, no system sans, no mixed typography. The monospace face carries the entire voice.
+- **Display** (800, clamp(2.25rem, 4vw, 3rem), line-height 1.1, -0.5px letter-spacing): Product name and major section headings.
+- **Hero** (800, 3rem, line-height 1.1, -1px letter-spacing): Hero section headline.
+- **Body** (400, clamp(13px, 1.4vw, 16px), line-height 1.7): Case study text, about text, contact content.
+- **Label** (700, 0.85rem, line-height 1, +0.05em letter-spacing, uppercase): Section kickers, skill tags, project tags, contact labels.
 
 ## Layout
 
-The first viewport is a CRT display filling the viewport (min-height 100vh), with the graticule as ground and phosphor traces as content. Below it, a single-column scrollable page wraps case studies, about, and contact sections at max-width 1000px.
+The homepage uses a single-column layout with a sticky header, hero section, about section, projects section, and contact section. Below-the-fold sections use full-width background bands alternating between white and light surface (#f8fafc).
 
-The graticule is a ten-by-ten division grid rendered as hairline linear-gradient layers, fixed at 64px cell size. All content is measured against this grid: traces align to divisions, readouts sit at measured positions, the title anchors top-left.
+**Spacing rhythm:** 8px baseline grid. Tight groups within cards (padding 24px), generous separation between sections (padding 100px top/bottom).
 
-**Spacing rhythm:** More space above a heading than below it (headings have margin-bottom only). Tight groups within case cards (padding 24px), generous separation between sections (margin-bottom 64px).
-
-**Responsive:** At widths below 640px, the CRT bezel narrows to 92vw with reduced height, traces stack with tighter gaps, knob font reduces to 11px, and the readout stack becomes vertical. The graticule cell size stays fixed at 64px; fewer divisions are visible on narrow screens.
+**Responsive:** Single column on all screen sizes. Header collapses to hamburger menu on mobile (below 768px). Hero text scales fluidly.
 
 ## Elevation & Depth
 
-No shadows are used for depth. Depth is conveyed through layering: the body ground (#060604) is the furthest plane, the CRT screen (#0a0a08) sits on top, the bezel border (#14140e) frames it, and phosphor/amber ink is the topmost layer. The inset shadow on the bezel creates a recessed-screen effect without colored halos.
+No shadows are used for depth. Depth is conveyed through borders (#e5e7eb), background layering (white cards on light surface), and subtle hover transforms (translateY -4px on cards).
 
-**Shadow Vocabulary:** None. This is a flat, tonal system — depth comes from value contrast and border definition, not from drop shadows.
+**Shadow Vocabulary:** None. Flat, tonal system.
 
 ## Shapes
 
-**Corner Strategy:** The CRT bezel is rounded (8px radius) to read as a physical instrument casing. Knobs are full circles (50% radius) to read as detented controls. Case cards have sharp corners with hairline borders — they are documents, not containers.
+**Corner Strategy:** 12px border-radius on cards and containers — rounded but not pill-shaped. 8px on smaller elements.
 
-**Borders:** 10px bezel border (#14140e), 2px screen border (#1a1a12), 2px knob borders (#c0c0b0), 1px case card borders (#1a1a12), 1px contact button border (#ffa500). No colored borders above 1px on cards or list items.
+**Borders:** 1px #e5e7eb on cards, buttons, and inputs. 3px #2563eb on section heading accents.
 
-**Clipping:** No clip-path masks, no geometric cutouts. The sweep line is a full-height 2px element, not a masked reveal.
+**Clipping:** None.
 
 ## Components
 
-### Buttons / Knobs
+### Buttons
 
-**Shape:** Circular (50% radius), 42×42px (36×36px on mobile).
+**Primary:** Background #2563eb, text #ffffff, 8px radius, padding 10px 20px, font-weight 600.
 
-**Primary:** Background #0a0a08, border 2px #c0c0b0, text #0f0 at 12px tracked uppercase. Active state adds phosphor glow (box-shadow 0 0 14px rgba(15,255,0,0.4)) and border color #0f0.
+**Outline:** Background transparent, border 1px #2563eb, text #2563eb, 8px radius, padding 10px 20px.
 
-**Hover / Focus:** Border color brightens to #0f0; active knobs gain phosphor glow shadow. Focus rings are not separately themed — the knob's own border serves as focus indication.
+**Hover:** Primary darkens to #1d4ed8; outline fills to #eff6ff.
 
-**Secondary / Ghost:** None. All navigation is knob-based.
+### Contact Links
 
-### Traces
+Block-level links with left icon, 12px padding, 1px #e5e7eb border, 12px radius. Hover fills to #eff6ff.
 
-**Style:** Phosphor green (#0f0) primary channel, dimmer green (#8fff8f) secondary channel. Monospace at 13-16px with trace-label prefix (11px, tracked). Traces animate in with a fade-and-slide; they are not interactive elements.
+### Project Cards
 
-### Readouts
+White background, 1px #e5e7eb border, 16px radius, 24px padding. Hover brightens border to #2563eb and lifts slightly.
 
-**Style:** Two-column readout panel. Primary readout (#fff text with #0f0 value at 1.6em), secondary readout (#ffa500 text). Tabular numerals for values.
+### Skill Tags
 
-### Cards / Containers
+Light blue background (#eff6ff), blue text (#1d4ed8), 1px #bfdbfe border, 20px radius, padding 6px 14px.
 
-**Corner Style:** Sharp (no radius) on case cards.
+### Signature Component: Hero Section
 
-**Background:** #0a0a08 (CRT screen color).
-
-**Shadow Strategy:** None — flat cards with hairline borders.
-
-**Border:** 1px solid #1a1a12.
-
-**Internal Padding:** 24px (lg spacing scale).
-
-### Navigation
-
-Knob row centered below the CRT screen: four circular knobs (view work, case studies, about, contact). Active knob is highlighted with phosphor border and glow. Clicking a knob switches the visible page section and freezes/releases the sweep line (trigger behavior).
-
-### Signature Component: CRT Graticule
-
-A ten-division graticule rendered as tiled linear-gradient hairlines (64px cells, #3a3a30 at 35% opacity) covering the CRT screen. Graticule labels (0.0–0.8 on Y axis, Q1–Q4 on X axis) in #c0c0b0 at 11px. This is the spatial armature — all content is measured against it.
+Light blue-gray gradient background (#f8fafc to #eff6ff), centered content, large display typography, two primary actions (View My Work primary, About Me outline).
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** use phosphor green (#0f0) as the only chromatic accent, capped at ~15% screen coverage per the One Voice Rule.
-- **Do** measure all content against the ten-division graticule; the grid is the spatial armature, not decoration.
-- **Do** keep motion to a single continuous sweep line; no scattered hover effects or per-section entrances.
-- **Do** use Courier New monospace for everything — display, body, and labels — differentiated by size, weight, and tracking only.
-- **Do** label all demonstration data as synthetic; no invented commercial claims.
+- **Do** use blue (#2563eb) as the only chromatic accent, used sparingly for actions and emphasis.
+- **Do** use system sans-serif fonts — no custom web fonts, no mixed typography.
+- **Do** keep generous whitespace — cards and sections have ample breathing room.
+- **Do** use light surface backgrounds (#f8fafc) for section separation, never gradients or textures.
+- **Do** label all demonstration data as real; no fabricated metrics.
 
 ### Don't:
 
-- **Don't** use a kicker or eyebrow above any heading — the heading carries its own weight (this is a ban, not a default).
-- **Don't** use gradient text, glass/blur decoration, or colored border-left/right above 1px on cards.
-- **Don't** use hard offset shadows (4px 4px 0) — this is not a neobrutalist world.
-- **Don't** use system display faces or mixed font families; Courier New is the only face.
-- **Don't** use same-size cards of icon-plus-heading-plus-text as page structure.
+- **Don't** use dark themes, neon accents, or glowing effects.
+- **Do not** use custom web fonts or mixed font families — one system sans-serif face.
+- **Don't** use glassmorphism, blur, or gradient backgrounds.
+- **Don't** use hard offset shadows — depth comes from borders and background layering.
+- **Don't** use same-size cards of icon-plus-heading-plus-text as the only page structure.
