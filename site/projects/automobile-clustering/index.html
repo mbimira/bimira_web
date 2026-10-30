@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case Study: Automobile Hierarchical Clustering. Unsupervised ML on the mtcars dataset (32 models, 11 features). Ward clustering, 3 clusters, silhouette 0.416.">
+  <title>Automobile Clustering — Case Study</title>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* Project-page additions on top of the CRT theme */
+    .project-nav { margin-bottom: 32px; }
+    .project-nav a { color: #ffa500; text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .project-nav a:hover { color: #fff; }
+    .project-nav .sep { color: #5a5a40; margin: 0 6px; }
+
+    .project-wrap { max-width: 980px; margin: 0 auto; padding: 48px 32px; }
+    .project-head { margin-bottom: 48px; border-bottom: 2px solid #3a3a30; padding-bottom: 16px; }
+    .project-head h1 { color: #fff; font-size: clamp(28px, 4vw, 40px); text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .project-head .status { color: #0f0; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+    .section { margin-bottom: 64px; }
+    .section h2 { color: #fff; font-size: clamp(22px, 3vw, 28px); text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 14px; border-left: 2px solid #ffa500; padding-left: 12px; }
+    .section p { color: #e8e8e0; font-size: clamp(13px, 1.4vw, 15px); line-height: 1.7; max-width: 72ch; margin-bottom: 10px; }
+    .section strong { color: #fff; }
+
+    /* Light panels for charts (charts have white backgrounds) */
+    .chart-panel { background: #0a0a08; border: 1px solid #1a1a12; padding: 20px; margin-bottom: 24px; display: flex; flex-direction: column; align-items: center; }
+    .chart-panel img { max-width: 100%; height: auto; display: block; background: #ffffff; border: 1px solid #e0e0e0; }
+    .chart-caption { color: #8a8a70; font-size: 11px; margin-top: 10px; text-align: center; max-width: 600px; }
+
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin: 24px 0; }
+    .metric { background: #0a0a08; border: 1px solid #1a1a12; padding: 20px; text-align: center; }
+    .metric .value { color: #0f0; font-size: 28px; font-weight: bold; font-variant-numeric: tabular-nums; }
+    .metric .label { color: #c0c0b0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 6px; }
+
+    .cluster-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    .cluster-table th, .cluster-table td { border: 1px solid #1a1a12; padding: 12px; text-align: left; font-size: 13px; }
+    .cluster-table th { background: #0a0a08; color: #fff; text-transform: uppercase; letter-spacing: 0.8px; font-size: 11px; }
+    .cluster-table td { color: #c0c0b0; }
+
+    .analysis-links { margin-top: 32px; }
+    .analysis-links a { color: #ffa500; text-decoration: none; border: 1px solid #ffa500; padding: 10px 18px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; margin-bottom: 10px; display: inline-block; }
+    .analysis-links a:hover { background: #ffa500; color: #060604; }
+
+    .back-link { color: #c0c0b0; font-size: 12px; text-decoration: none; margin-top: 48px; display: inline-block; }
+    .back-link:hover { color: #fff; }
+
+    .asset-note { color: #8a8a70; font-size: 12px; font-style: italic; margin-top: 16px; }
+
+    @media (max-width: 640px) {
+      .project-wrap { padding: 32px 20px; }
+      .cluster-table { font-size: 11px; }
+      .cluster-table th, .cluster-table td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="project-nav">
+    <a href="../../index.html">&larr; back to portfolio</a>
+    <span class="sep">·</span>
+    <a href="Automobile_Hierarchical_Clustering_Portfolio.ipynb">View full analysis</a>
+    <span class="sep">·</span>
+    <a href="Automobile_Clustering_Project.zip">Download project package</a>
+  </div>
+
+  <div class="project-wrap">
+    <div class="project-head">
+      <span class="status">case study 02 · complete</span>
+      <h1>Automobile Clustering</h1>
+    </div>
+
+    <div class="section">
+      <h2>Problem</h2>
+      <p>Automobile buying and comparison rely on predefined categories (sedan, SUV, truck) that don’t always reflect how vehicles actually relate. Manufacturers, dealers, and analysts need a data-driven way to segment cars by their real technical and performance characteristics — fuel efficiency, power, weight, engine size — without imposing arbitrary labels.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data</h2>
+      <p>The project uses the classic <strong>mtcars</strong> automobile dataset — <strong>32 automobile models</strong> with <strong>11 numeric features</strong> plus a vehicle model identifier: miles per gallon (mpg), cylinders, displacement, horsepower, rear axle ratio, weight, quarter-mile time, engine type, transmission type, number of gears, and carburetors. The dataset is a commonly used historical teaching dataset, not a current market sample.</p>
+    </div>
+
+    <div class="section">
+      <h2>Method</h2>
+      <p>Applied <strong>agglomerative hierarchical clustering</strong> with Ward and average linkage using Euclidean distance. All numerical features were standardized with Scikit-learn’s <code>StandardScaler</code> before clustering. Used SciPy for hierarchical clustering and dendrograms, Scikit-learn for silhouette evaluation and PCA, and Pandas, Matplotlib, and Seaborn for analysis and visualization. Compared cluster solutions from 2 to 7 groups.</p>
+      <div class="chart-panel">
+        <img src="images/01_dendrograms.png" alt="Average and Ward linkage dendrograms showing hierarchical clustering structure">
+        <div class="chart-caption">Figure 1: Dendrograms comparing Average and Ward linkage methods</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Result</h2>
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="value">0.416</div>
+          <div class="label">silhouette score (3 clusters)</div>
+        </div>
+        <div class="metric">
+          <div class="value">3</div>
+          <div class="label">clusters (Ward linkage)</div>
+        </div>
+        <div class="metric">
+          <div class="value">84.17%</div>
+          <div class="label">variance (PCA, 2 components)</div>
+        </div>
+        <div class="metric">
+          <div class="value">15 · 12 · 5</div>
+          <div class="label">vehicles per cluster</div>
+        </div>
+      </div>
+      <p>The selected solution was <strong>Ward hierarchical clustering with 3 clusters</strong> and a silhouette score of <strong>0.416</strong>. The clusters contained 15, 12, and 5 vehicles respectively. Ward solutions with 4 and 5 clusters had slightly higher silhouette scores (0.429 and 0.430), but the 3-cluster solution was selected as a practical, interpretable balance rather than the mathematical maximum. The first two PCA components explained approximately <strong>84.17%</strong> of the standardized dataset’s variance.</p>
+      <table class="cluster-table">
+        <thead>
+          <tr><th>Cluster</th><th>Profile</th><th>Avg MPG</th><th>Avg Weight (1,000 lbs)</th><th>Avg Horsepower</th><th>Size</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Fuel-efficient, lighter vehicles</td><td>24.65</td><td>2.58</td><td>—</td><td>15 vehicles</td></tr>
+          <tr><td>2</td><td>Heavier, predominantly 8-cylinder</td><td>15.05</td><td>4.10</td><td>—</td><td>12 vehicles</td></tr>
+          <tr><td>3</td><td>Higher-performance vehicles</td><td>—</td><td>3.00</td><td>198.80</td><td>5 vehicles</td></tr>
+        </tbody>
+      </table>
+      <div class="chart-panel">
+        <img src="images/02_cluster_heatmap.png" alt="Standardized cluster mean heatmap showing feature patterns per cluster">
+        <div class="chart-caption">Figure 2: Cluster profile heatmap (standardized feature means)</div>
+      </div>
+      <div class="chart-panel">
+        <img src="images/03_pca_visualization.png" alt="PCA scatter plot showing automobile segments by cluster">
+        <div class="chart-caption">Figure 3: PCA visualization of automobile clusters</div>
+      </div>
+      <p class="asset-note">All charts generated from the analysis notebook. Full code and additional outputs are available in the linked notebook.</p>
+    </div>
+
+    <div class="section">
+      <h2>Limitations</h2>
+      <p>The mtcars dataset contains only 32 observations, so cluster assignments should be treated as illustrative rather than definitive for the broader vehicle market. The data is historical (1970s models) and does not reflect current vehicle technologies, fuel types, or market segments. Results are sensitive to feature scaling and distance metric choice; Ward linkage with Euclidean distance was selected for interpretability, but other linkage methods may produce different groupings. Cluster solutions with 4 and 5 groups had marginally higher silhouette scores but were less interpretable.</p>
+    </div>
+
+    <div class="analysis-links">
+      <a href="Automobile_Hierarchical_Clustering_Portfolio.ipynb">View full analysis</a>
+      <a href="Automobile_Clustering_Project.zip">Download project package</a>
+    </div>
+
+    <p class="back-link"><a href="../../index.html">&larr; back to portfolio</a></p>
+  </div>
+
+</body>
+</html>

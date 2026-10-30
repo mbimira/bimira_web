@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Michael Bimira — Data Analytics &amp; Applied AI Portfolio. Real case studies in predictive modeling, neural networks, and data-driven decision making. Built static, framework-free.">
+  <title>Michael Bimira — Data Analytics &amp; Applied AI Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- CRT Oscilloscope — first viewport, the thesis -->
+  <div class="crt-display" id="crt">
+    <div class="crt-bezel">
+      <div class="crt-brand">OSCILLOSCOPE</div>
+      <div class="crt-power">ON</div>
+    </div>
+    <div class="crt-screen">
+      <div class="graticule" id="graticule"></div>
+      <div class="traces" id="traces">
+        <div class="trace channel-1 active" data-case="concrete">
+          <span class="trace-label">CH1 · case study 01</span>
+          <span class="trace-value">concrete compressive strength</span>
+        </div>
+        <div class="trace channel-2 active" data-case="automobile">
+          <span class="trace-label">CH2 · case study 02</span>
+          <span class="trace-value">automobile clustering</span>
+        </div>
+        <div class="trace channel-3" data-case="coming-soon">
+          <span class="trace-label">CH3 · coming soon</span>
+          <span class="trace-value">in progress</span>
+        </div>
+      </div>
+      <div class="sweep" id="sweep"></div>
+      <div class="crt-title">michael bimira</div>
+      <div class="crt-subtitle">data analytics &amp; applied ai — case studies</div>
+      <div class="crt-value-prop">Healthcare professional &amp; Data/AI Engineer — predictive modeling, neural networks, agentic workflows.</div>
+      <div class="readouts">
+        <div class="readout primary">
+          <span class="readout-label">signal strength</span>
+          <span class="readout-value" id="readout-val">82%</span>
+        </div>
+        <div class="readout secondary">
+          <span class="readout-label">channels active</span>
+          <span class="readout-value" id="chan-count">02</span>
+        </div>
+      </div>
+    </div>
+    <div class="controls" id="controls">
+      <div class="knob active" data-section="home">view work</div>
+      <div class="knob" data-section="cases">case studies</div>
+      <div class="knob" data-section="about">about</div>
+      <div class="knob" data-section="contact">contact</div>
+    </div>
+    <div class="action"><a href="#contact">make contact &rarr;</a></div>
+  </div>
+  <div class="page-wrap">
+    <section id="home" class="page-section">
+      <div class="section-intro">
+        <h2>the work, measured</h2>
+        <p>Each case study is a signal on the graticule: the problem, the data, the method, the result. No tool lists, no fabricated metrics — real analysis you can inspect.</p>
+      </div>
+      <div class="case-grid" id="case-grid">
+        <!-- Case studies injected by JS -->
+      </div>
+    </section>
+
+    <section id="cases" class="page-section hidden">
+      <div class="section-intro">
+        <h2>case studies</h2>
+        <p>Full breakdowns of completed projects: problem statement, dataset, method, outcome, and links to live dashboards where available.</p>
+      </div>
+      <div class="case-detail-list" id="case-detail-list">
+        <!-- Detailed case studies injected by JS -->
+      </div>
+    </section>
+
+    <section id="about" class="page-section hidden">
+      <div class="section-intro">
+        <h2>about</h2>
+      </div>
+      <div class="about-content">
+        <p>Healthcare professional and Data/AI Engineer bridging operational clinical experience with machine learning, agentic workflows, and full-stack development. Developed an automated task assignment and staffing application for Arizona State Hospital that instantly routes shift schedules into a centralized database. Proven track record building end-to-end applications (TypeScript, React, Python) and tuning ML models to turn complex domain data into actionable intelligence.</p>
+        <p>This site is static HTML/CSS/JavaScript — no framework, no build step, free hosting. It exists to show work, not to explain the problem.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="page-section hidden">
+      <div class="section-intro">
+        <h2>contact</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-links">
+        <a href="mailto:mikebimira@gmail.com" class="contact-link">Email</a>
+        <a href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/mbimira" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+        <a href="resume.html" class="contact-link">Résumé</a>
+      </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
