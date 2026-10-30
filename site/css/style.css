@@ -339,8 +339,8 @@ a:hover { color: #1d4ed8; }
 .contact-link {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1rem;
+  gap: 10px;
+  font-size: 0.875rem;
   color: #2563eb;
   font-weight: 500;
   padding: 14px 24px;
@@ -356,9 +356,10 @@ a:hover { color: #1d4ed8; }
 }
 
 .contact-icon {
-  font-size: 1.25rem;
-  width: 24px;
+  font-size: 1.75rem;
+  width: 28px;
   text-align: center;
+  line-height: 1;
 }
 
 /* ── Footer ── */
