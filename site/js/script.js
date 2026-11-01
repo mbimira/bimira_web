@@ -77,7 +77,7 @@
     taglines[currentTagline].classList.add('active');
   }
 
-  if (taglines.length) setInterval(rotateTagline, 4000);
+  setInterval(rotateTagline, 4000);
 
   // ── Scroll Reveal Animation ──
   const revealElements = document.querySelectorAll('.reveal');
