@@ -1,0 +1,39 @@
+.contact-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: min(90vh, 820px);
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.contact-dialog::backdrop { background: rgba(5, 16, 24, .76); }
+.contact-dialog form { padding: 28px; }
+.contact-dialog .dialog-heading { display: flex; align-items: flex-start; gap: 12px; justify-content: space-between; }
+.contact-dialog h2 { margin: 8px 0 20px; font-size: 1.7rem; line-height: 1.15; }
+.contact-dialog label { display: grid; gap: 6px; margin: 0 0 15px; font-size: .84rem; font-weight: 700; }
+.contact-dialog input,
+.contact-dialog textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 11px 12px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: .95rem;
+}
+.contact-dialog textarea { min-height: 130px; resize: vertical; }
+.contact-dialog input:focus,
+.contact-dialog textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.contact-dialog .dialog-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.contact-dialog button.button { font-family: inherit; line-height: 1.5; cursor: pointer; background: transparent; }
+.contact-dialog button.button.fill { background: var(--blue); color: #fff; }
+.hero button.button { font-family: inherit; cursor: pointer; background: transparent; }
+.contact-dialog button.button:disabled { opacity: .65; cursor: wait; }
+.contact-dialog .dialog-close { margin-left: auto; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 1.5rem; cursor: pointer; }
+.contact-dialog .form-status { min-height: 1.5em; margin: 8px 0 0; color: var(--muted); font-size: .87rem; }
+.contact-dialog .form-status[data-state="error"] { color: #c44735; }
+.contact-dialog .form-status[data-state="success"] { color: #288250; }
+.contact-dialog .contact-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 560px) { .contact-dialog form { padding: 22px; } }
