@@ -2,7 +2,7 @@
 
 Portfolio website and project case studies for Michael Bimira.
 
-**Live site:** [mbimira.github.io/bimira_web](https://mbimira.github.io/bimira_web/)
+**Live site:** [mbimira.github.io](https://mbimira.github.io/)
 
 The site is a static HTML, CSS, and JavaScript project. It has no build step or package installation. GitHub Actions publishes the `site/` directory to GitHub Pages when changes are pushed to `main`.
 
@@ -27,15 +27,15 @@ Then open [http://localhost:8000](http://localhost:8000).
 The `impeccable` directory is a Git submodule. To include it when cloning, use:
 
 ```bash
-git clone --recurse-submodules https://github.com/mbimira/bimira_web.git
+git clone --recurse-submodules https://github.com/mbimira/mbimira.github.io.git
 ```
 
 Without the submodule, the website and its deployment still work.
 
 ## Featured work
 
-- [Concrete compressive strength](https://mbimira.github.io/bimira_web/projects/concrete-strength/) — regression modeling on the UCI concrete dataset.
-- [Automobile clustering](https://mbimira.github.io/bimira_web/projects/automobile-clustering/) — hierarchical clustering and PCA on `mtcars`.
+- [Concrete compressive strength](https://mbimira.github.io/projects/concrete-strength/) — regression modeling on the UCI concrete dataset.
+- [Automobile clustering](https://mbimira.github.io/projects/automobile-clustering/) — hierarchical clustering and PCA on `mtcars`.
 - [Landing page A/B test](https://github.com/mbimira/A-B-TESTING) — experiment analysis and methodology.
 
 ## Deployment
