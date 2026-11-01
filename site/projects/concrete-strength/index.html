@@ -60,15 +60,15 @@
 
     <div class="section">
       <h2>Problem</h2>
-      <p>Concrete mix design depends on 28-day cylinder tests to confirm compressive strength. That cure time means engineers wait weeks before approving a mix or a pour, slowing projects and tying up materials. They need an early strength estimate from mix proportions alone, so decisions can be made in hours instead of weeks.</p>
+      <p>Concrete strength is commonly measured by crushing test specimens after a specified curing period, often 28 days. This analysis asks whether mix ingredients and curing age can estimate measured strength from historical lab data. Such estimates may help screen candidate mixes, but they do not replace physical testing or established design standards.</p>
     </div>
 
     <div class="section">
       <h2>Data</h2>
-      <p>Public <strong>UCI Concrete Compressive Strength dataset</strong> — <strong>1,030 lab samples</strong> with mix ingredients (cement, slag, fly ash, water, superplasticizer, coarse aggregate, fine aggregate, age) and measured compressive strength in MPa.</p>
+      <p>Public <strong><a href="https://archive.ics.uci.edu/dataset/165/concrete%2Bcompressive%2Bstrength" target="_blank" rel="noopener noreferrer">UCI Concrete Compressive Strength dataset</a></strong> — <strong>1,030 lab records</strong> with seven mix ingredients and curing age as inputs, and compressive strength in MPa as the target. The analysis removes 25 exact duplicate rows, leaving 1,005 records for modeling.</p>
       <div class="chart-panel">
         <img src="images/data-overview.png" alt="Dataset overview showing feature distributions and target variable">
-        <div class="chart-caption">Figure 1: Data overview: feature distributions and strength target across 1,030 samples</div>
+        <div class="chart-caption">Figure 1: Feature distributions and strength target across the 1,005 deduplicated records</div>
       </div>
       <div class="chart-panel">
         <img src="images/correlation-matrix.png" alt="Correlation matrix of mix ingredients and strength">
@@ -78,11 +78,12 @@
 
     <div class="section">
       <h2>Method</h2>
-      <p>Cleaned and validated the data in Python, then trained a <strong>tuned neural network</strong> to predict strength from mix proportions. Compared it against <strong>linear regression</strong> and <strong>gradient boosting</strong> baselines using held-out evaluation, checking that age and binder weight were handled correctly as non-linear drivers.</p>
+      <p>After removing exact duplicates, I split the 1,005 records by row into 804 training samples and 201 held-out samples. I tuned a <strong>neural network</strong> with cross-validation on the training data, then compared it with <strong>linear regression</strong> and <strong>gradient boosting</strong>. A separate nested evaluation uses five outer recipe-grouped folds and four inner grouped folds to tune the network without recipe overlap.</p>
       <div class="chart-panel">
-        <img src="images/feature-importance.png" alt="Feature importance showing age, binder, cement, water as top drivers">
-        <div class="chart-caption">Figure 3: Feature importance: age is the strongest driver, then binder, cement and water</div>
+        <img src="images/feature-importance.png" alt="Permutation importance for the neural network, with log age and binder-related features ranked highest">
+        <div class="chart-caption">Figure 3: Permutation importance for the neural network; correlated inputs share importance</div>
       </div>
+      <p>Permutation importance ranks log of curing age highest for this fitted neural network. Because inputs such as binder and cement overlap, the scores describe model reliance, not causal effects.</p>
     </div>
 
     <div class="section">
@@ -105,7 +106,7 @@
           <div class="label">RMSE — linear regression</div>
         </div>
       </div>
-      <p>The tuned neural network reaches <strong>R² 0.93, RMSE 4.6 MPa and MAE 2.9 MPa</strong> on held-out data, about <strong>38% lower error than linear regression (7.4 MPa RMSE)</strong>. Gradient boosting is essentially tied with the neural network. On unseen recipes, expect about <strong>5 MPa RMSE</strong>. Age is the biggest driver, then binder, cement and water.</p>
+      <p>On the 201-row random holdout, the tuned neural network reaches <strong>R² 0.930, RMSE 4.565 MPa and MAE 2.917 MPa</strong>, about <strong>38% lower RMSE than linear regression (7.402 MPa)</strong>. Gradient boosting has slightly lower RMSE (4.454 MPa), while the neural network has slightly lower MAE. In nested recipe-grouped cross-validation, mean RMSE is <strong>5.417 MPa</strong> for the neural network and <strong>4.986 MPa</strong> for gradient boosting. These are internal cross-validation estimates, not external validation on new laboratory data.</p>
       <div class="chart-panel">
         <img src="images/model-comparison.png" alt="Model comparison showing neural network vs linear regression vs gradient boosting">
         <div class="chart-caption">Figure 4: Model comparison: neural network vs linear regression vs gradient boosting</div>
@@ -118,7 +119,7 @@
 
     <div class="section">
       <h2>Limitations</h2>
-      <p>On unseen recipes, expect about <strong>5 MPa RMSE</strong>. Degradation from held-out results suggests the model is sensitive to mix compositions outside the UCI range. The dataset covers lab-cured samples at controlled ages; field conditions (temperature, curing variability, aggregate moisture) are not represented. Strength predictions should be verified with physical testing before structural use.</p>
+      <p>The nested recipe-grouped results estimate mean RMSE of <strong>5.4 MPa</strong> for the neural network and <strong>5.0 MPa</strong> for gradient boosting on this dataset. External data is still needed to confirm transfer to new materials and laboratories. The dataset covers lab-cured samples at controlled ages; field conditions (temperature, curing variability, aggregate moisture) are not represented. Validate predictions with physical testing before using them in engineering decisions.</p>
     </div>
 
     <div class="analysis-links">
